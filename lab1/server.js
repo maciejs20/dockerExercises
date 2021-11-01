@@ -18,8 +18,4 @@ const keysSorted = Object.keys(env).sort(function (a, b) {
 keysSorted.forEach(function (value) {
   console.log(sprintf('    %20s=%s', value, env[value]))
 })
-console.log('Waiting for finish - timeout [ms]:' + TIMEOUT_EXIT)
 
-setTimeout(function () {
-  console.log('Program exits.')
-}, TIMEOUT_EXIT, 0)
