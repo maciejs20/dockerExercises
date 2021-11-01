@@ -1,0 +1,14 @@
+FROM node:latest
+RUN mkdir /app
+RUN mkdir /app/config
+RUN mkdir /app/files
+WORKDIR /app
+ADD server.js /app
+ADD info.js /app
+ADD serve.js /app
+ADD appConfig.js /app
+COPY config /app/config
+COPY files /app/files
+ADD package.json  /app
+RUN npm install
+ENTRYPOINT ["node", "server.js","--mode", "ENV"]

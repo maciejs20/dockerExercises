@@ -1,0 +1,9 @@
+{
+  "App": {
+    "filePath": "files",
+    "appPort": "8081",
+    "username": "student",
+    "password": "admin1234",
+    "authRequired": true
+  }
+}
